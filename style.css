@@ -1,0 +1,29 @@
+.container {
+  height: 1000px;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  background-color: blueviolet;
+  align-items: center;
+  align-content: center;
+}
+
+.box {
+  min-height: 50px;
+  min-width: 50px;
+  flex-grow: 1;
+  flex-direction: row;
+  flex: inline-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.weekbox {
+  width: 30%;
+  background-color: crimson;
+  min-height: 75%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+}
