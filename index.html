@@ -9,19 +9,40 @@
   </head>
   <body>
     <div class="container">
-      <div class="weekbox">
-        <div class="box">
+      <div class="container--week">
+        <div class="box--day">
           <div>
-            <button style="font-size: 50px;"><--</button>
+            <button id="btn--alert" class="button--day"><--</button>
           </div>
           <div>
-            <span style="font-size: 50px; align-self: center;"> Wochentag </span>
+            <h1 style="font-size: 50px; align-self: center">Wochentag</h1>
           </div>
           <div>
-            <button style="font-size: 50px; align-self: flex-end;">--></button>
+            <button class="button--day">--></button>
+          </div>
+        </div>
+        <div class="box--menu">
+          <div class="food--reaction">
+            <div class="div--menubox">
+              <div class="box--food">Lachsburger mit Pommes</div>
+              <button class="button--like">👍</button>
+            </div>
+            <div class="div--menubox">
+              <div class="box--food">Gerstonipfanne</div>
+             <button class="button--like">👍</button>
+            </div>
+            <div class="div--menubox">
+              <div class="box--food">Westfälische Beutelwurst mit Kutteln</div>
+              <button class="button--like">👍</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+    <!--<script defer>
+      const alertButton=document.getElementById("btn--alert")
+      console.log(alertButton)
+      addEventListener
+    </script>
+  --></body>
 </html>

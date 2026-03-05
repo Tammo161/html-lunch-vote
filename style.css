@@ -1,29 +1,79 @@
 .container {
+  display: flex;
   height: 1000px;
   width: 100%;
+  min-width: 1500px;
+  background-color: deepskyblue;
   justify-content: space-around;
-  display: flex;
-  background-color: blueviolet;
   align-items: center;
   align-content: center;
 }
 
-.box {
-  min-height: 50px;
-  min-width: 50px;
-  flex-grow: 1;
-  flex-direction: row;
-  flex: inline-flex;
+.box--day {
   display: flex;
+  min-height: 50px;
+  width: 100%;
   justify-content: space-between;
 }
 
-.weekbox {
-  width: 30%;
-  background-color: crimson;
-  min-height: 75%;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: row;
+.container--week {
   display: flex;
+  min-height: 75%;
+  width: 33%;
+  min-width: 550px;
+  background-color: white;
+  align-items: flex-start;
+  flex-direction: column;
+  
 }
+
+.button--day {
+  min-width: 50px;
+  font-size: 50px;
+  font-size: 50px;
+}
+
+h1 {
+  display: inline;
+}
+
+.box--menu {
+  display: flex;
+  height: 681px;
+  width: 100%;
+  background-color: yellow;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.box--food{
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background-color:chartreuse;
+  font-size:x-large
+}
+
+.button--like{
+  width: 20%;
+  font-size: 2rem;
+  align-self: flex-start;
+}
+
+.food--reaction{
+  display: flex;
+  height: 80%;
+  width: 70%;
+  background-color: blueviolet;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.div--menubox{
+  width: 100%;
+}
+
+
+
