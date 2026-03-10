@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Vote.html</title>
     <link rel="stylesheet" href="style.css" />
+    <link src="Mensa-Essen.json" />
+    <script src="https://cdn.jsdelivr.net/npm/umbrellajs"></script>
     <script type="text/javascript" src="function.js"></script>
   </head>
   <body>
@@ -25,21 +27,27 @@
         <div class="box--menu">
           <div class="food--reaction">
             <div class="div--menubox">
-              <div class="box--food">Lachsburger mit Pommes</div>
+              <div class="box--food">
+                <div id="essen1">Lachsburger mit Pommes</div>
+              </div>
               <button class="button--like">
                 👍
-                <div class="count--like"> 1</div>
+                <div class="count--like">1</div>
               </button>
             </div>
             <div class="div--menubox">
-              <div class="box--food">Gerstonipfanne</div>
-             <button class="button--like">
-              👍
-              <div class="count--like">2</div>
-            </button>
+              <div class="box--food">
+                <div id="essen2">Gerstonipfanne</div>
+              </div>
+              <button class="button--like">
+                👍
+                <div class="count--like">2</div>
+              </button>
             </div>
             <div class="div--menubox">
-              <div class="box--food">Westfälische Beutelwurst mit Kutteln</div>
+              <div class="box--food">
+                <div id="essen3">Westfälische Beutelwurst mit Kutteln</div>
+              </div>
               <button class="button--like">
                 👍
                 <div class="count--like">3</div>
@@ -49,6 +57,9 @@
         </div>
       </div>
     </div>
+    <script defer>
+      loadMeals();
+    </script>
     <!--<script defer>
       const alertButton=document.getElementById("btn--alert")
       console.log(alertButton)
