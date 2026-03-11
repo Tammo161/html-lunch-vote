@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  height: 1000px;
+  height: 1200px;
   width: 100%;
   min-width: 1500px;
   background-color: white;
@@ -40,7 +40,7 @@ h1 {
 
 .box--menu {
   display: flex;
-  height: 681px;
+  height: 881px;
   width: 100%;
   background-color: white;
   justify-content: center;
@@ -81,4 +81,12 @@ h1 {
 
 .count--like{
   font-size: 2rem;
+}
+
+.box--burger{
+  display: flex;
+  height: 100px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
