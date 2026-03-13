@@ -1,18 +1,24 @@
 [
-  {
-    "ausgabe": "Ausgabe 1",
-    "essen": "Seelachs"
-  },
-  {
-    "ausgabe": "Ausgabe 2",
-    "essen": "Hackschnitzel"
-  },
-  {
-    "ausgabe": "Ausgabe 3",
-    "essen": "Westfälische Beutelwurst"
-  },
-  {
-    "ausgabe": "Burger",
-    "essen": "Black Burger mit Pulled Salmon"
-  }
+    {
+      "counterId": "counter3",
+      "counterName": "Ausgabe 3",
+      "essen": "Westfälische Beutelwurst"
+    },
+    {
+      "counterId": "counter1",
+      "counterName": "Ausgabe 1",
+      "essen": "Seelachs"
+    },
+    {
+      "counterId": "counter4",
+      "counterName": "Burger",
+      "essen": "Black Burger mit Pulled Salmon"
+    },
+    {
+      "counterId": "counter2",
+      "counterName": "Ausgabe 2",
+      "essen": "Hackschnitzel"
+      
+    }
 ]
+  

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Vote.html</title>
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="mensaEssen.json"></script>
+    <script type="t" src="mensaEssen.json"></script>
     <script src="https://cdn.jsdelivr.net/npm/umbrellajs"></script>
     <script type="text/javascript" src="function.js"></script>
   </head>
@@ -31,40 +31,64 @@
               <div class="box--food">
                 <div id="counter1-food">Essen</div>
               </div>
-              <button class="button--like">
+              <div class="btn--count">
+                <button class="button--like" id="btnLike1">
                 👍
-                <div class="count--like">1</div>
+                <div class="count--like" id="likeCount1">X</div>
               </button>
+              <button class="button--dislike" id="btnDisLike1">
+                🤮 
+                <div class="count--dislike" id="disLikeCount1">X</div>
+              </button>
+              </div>
             </div>
             <div class="div--menubox">
               <div id="counter2-name">Ausgabe</div>
               <div class="box--food">
                 <div id="counter2-food">Essen</div>
               </div>
-              <button class="button--like">
+              <div class="btn--count">
+                <button class="button--like" id="btnLike2">
                 👍
-                <div class="count--like">2</div>
+                <div class="count--like" id="likeCount2">X</div>
               </button>
+              <button class="button--dislike" id="btnDisLike2">
+                🤮 
+                <div class="count--dislike" id="disLikeCount2">X</div>
+              </button>
+              </div>
             </div>
             <div class="div--menubox">
               <div id="counter3-name">Ausgabe</div>
               <div class="box--food">
                 <div id="counter3-food">Essen</div>
               </div>
-              <button class="button--like">
+              <div class="btn--count">
+                <button class="button--like" id="btnLike3">
                 👍
-                <div class="count--like">3</div>
+                <div class="count--like" id="likeCount3">X</div>
               </button>
+              <button class="button--dislike" id="btnDisLike3">
+                🤮 
+                <div class="count--dislike" id="disLikeCount3">X</div>
+              </button>
+              </div>
             </div>
             <div class="div--menubox">
               <div id="counter4-name">Ausgabe</div>
               <div class="box--food">
                 <div id="counter4-food">Essen</div>
               </div>
-              <button class="button--like">
+              <div class="btn--count">
+                <button class="button--like" id="btnLike4">
                 👍
-                <div class="count--like">4</div>
+                <div class="count--like" id="likeCount4">X</div>
               </button>
+              <button class="button--dislike" id="btnDisLike4">
+                🤮 
+                <div class="count--dislike" id="disLikeCount4">X</div>
+              </button>
+              </div>
             </div>
           </div>
         </div>
@@ -72,6 +96,7 @@
     </div>
     <script defer>
       loadMeals();
+     initialize();
     </script>
     <!--<script defer>
       const alertButton=document.getElementById("btn--alert")

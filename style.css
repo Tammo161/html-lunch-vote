@@ -63,7 +63,12 @@ h1 {
   font-size: 2rem;
   flex-direction: row;
 }
-
+.button--dislike {
+  display: flex;
+  font-size: 2rem;
+  flex-direction: row;
+  align-self: flex-end;
+}
 .food--reaction {
   display: flex;
   height: 80%;
@@ -83,10 +88,20 @@ h1 {
   font-size: 2rem;
 }
 
+.count--dislike{
+  font-size: 2rem;
+}
+
 .box--burger{
   display: flex;
   height: 100px;
   width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.btn--count{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
 }
