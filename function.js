@@ -38,17 +38,21 @@ function loadMeals() {
 
 function initialize(){
 
-let vote1 = Number.parseInt(window.localStorage.getItem("likecount"));
+u('#likeCount1').text(localStorage.getItem('likecount1'))
 
-  u('#btnLike1').on('click', function(e){
-  window.localStorage.setItem('likecount', vote ++)
+u('#btnLike1').on('click', function(e){
+  
+  let count = localStorage.getItem('likecount1');
+  count++;
+
+  window.localStorage.setItem('likecount1' , count);
+ 
+  u('#likeCount1').text(count);
+
+  
 });
 
-  u('#btnLike2').on('click', function(e){
-  window.localStorage.setItem('likecount', '2')
-});
 }
-
 
 
 
