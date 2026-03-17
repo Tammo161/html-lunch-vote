@@ -1,6 +1,3 @@
-
-
-
 function loadMeals() {
   console.log("in loadMeals");
 
@@ -25,7 +22,7 @@ function loadMeals() {
       counterName: "Ausgabe 2",
       essen: "Hackschnitzel",
     },
-  ]; 
+  ];
 
   for (let i = 0; i <= json.length - 1; i++) {
     const counter = json[i];
@@ -34,28 +31,33 @@ function loadMeals() {
     u("#" + counterId + "-name").replace(counter.counterName);
     u("#" + counterId + "-food").replace(counter.essen);
   }
-}
+};
 
-function initialize(){
 
-u('#likeCount1').text(localStorage.getItem('likecount1'))
+function initialize() {
+  for (let j = 0; j < 5; j++) {
 
-u('#btnLike1').on('click', function(e){
-  
-  let count = localStorage.getItem('likecount1');
-  count++;
+    u("#likeCount" + j).text(localStorage.getItem("likeCount" + j));
 
-  window.localStorage.setItem('likecount1' , count);
+    u('#btnLike' + j).on("click", function (e) {
+      let count = localStorage.getItem("likeCount" + j);
+      count++;
+
+      window.localStorage.setItem("likeCount" + j, count);
+
+      u("#likeCount" + j).text(count);
+    });
  
-  u('#likeCount1').text(count);
+    u("#disLikeCount" + j).text(localStorage.getItem("disLikeCount" + j));
 
-  
-});
+    u("#btnDisLike" + j).on("click", function (e) {
+      let count = localStorage.getItem("disLikeCount" + j);
+      count++;
 
+      window.localStorage.setItem("disLikeCount" + j, count);
+
+      u("#disLikeCount" + j).text(count);
+    });
+  }
+  console.log('ende')
 }
-
-
-
-
-  
-
