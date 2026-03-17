@@ -31,33 +31,25 @@ function loadMeals() {
     u("#" + counterId + "-name").replace(counter.counterName);
     u("#" + counterId + "-food").replace(counter.essen);
   }
-};
+}
 
+function initializeButton(divId, storageKey, buttonId) {
+  u(divId).text(localStorage.getItem(storageKey));
+
+  u(buttonId).on("click", function (e) {
+    let count = localStorage.getItem(storageKey);
+    count++;
+
+    window.localStorage.setItem(storageKey, count);
+
+    u(divId).text(count);
+  });
+}
 
 function initialize() {
   for (let j = 0; j < 5; j++) {
-
-    u("#likeCount" + j).text(localStorage.getItem("likeCount" + j));
-
-    u('#btnLike' + j).on("click", function (e) {
-      let count = localStorage.getItem("likeCount" + j);
-      count++;
-
-      window.localStorage.setItem("likeCount" + j, count);
-
-      u("#likeCount" + j).text(count);
-    });
- 
-    u("#disLikeCount" + j).text(localStorage.getItem("disLikeCount" + j));
-
-    u("#btnDisLike" + j).on("click", function (e) {
-      let count = localStorage.getItem("disLikeCount" + j);
-      count++;
-
-      window.localStorage.setItem("disLikeCount" + j, count);
-
-      u("#disLikeCount" + j).text(count);
-    });
+    initializeButton("#likeCount" + j, "likeCount" + j, "#btnLike" + j);
+    initializeButton("#disLikeCount" + j, "disLikeCount" + j, "#btnDisLike" + j);
+    
   }
-  console.log('ende')
 }
