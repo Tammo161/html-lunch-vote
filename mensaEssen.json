@@ -1,24 +1,125 @@
 [
-    {
-      "counterId": "counter3",
-      "counterName": "Ausgabe 3",
-      "essen": "Westfälische Beutelwurst"
-    },
-    {
-      "counterId": "counter1",
-      "counterName": "Ausgabe 1",
-      "essen": "Seelachs"
-    },
-    {
-      "counterId": "counter4",
-      "counterName": "Burger",
-      "essen": "Black Burger mit Pulled Salmon"
-    },
-    {
-      "counterId": "counter2",
-      "counterName": "Ausgabe 2",
-      "essen": "Hackschnitzel"
-      
-    }
+ {
+   "wochentag": "Montag",
+   "auswahl": [
+       {
+         "counterId": "counter3",
+         "counterName": "Ausgabe 3",
+         "essen": "Westfälische Beutelwurst"
+       },
+       {
+         "counterId": "counter1",
+         "counterName": "Ausgabe 1",
+         "essen": "Seelachs"
+       },
+       {
+         "counterId": "counter4",
+         "counterName": "Burger",
+         "essen": "Black Burger mit Pulled Salmon"
+       },
+       {
+         "counterId": "counter2",
+         "counterName": "Ausgabe 2",
+         "essen": "Hackschnitzel"
+        
+       }]
+ },
+  { "wochentag": "Dienstag",
+   "auswahl": [
+       {
+         "counterId": "counter3",
+         "counterName": "Ausgabe 3",
+         "essen": "Schnitzel mit Pommes"
+       },
+       {
+         "counterId": "counter1",
+         "counterName": "Ausgabe 1",
+         "essen": "Fischstäbchen"
+       },
+       {
+         "counterId": "counter4",
+         "counterName": "Burger",
+         "essen": "Black Burger mit Pulled Salmon"
+       },
+       {
+         "counterId": "counter2",
+         "counterName": "Ausgabe 2",
+         "essen": "Kartoffelecken"
+        
+       }]
+ },
+  { "wochentag": "Mittwoch",
+     "auswahl": [
+       {
+         "counterId": "counter3",
+         "counterName": "Ausgabe 3",
+         "essen": "Sushi"
+       },
+       {
+         "counterId": "counter1",
+         "counterName": "Ausgabe 1",
+         "essen": "Pizza"
+       },
+       {
+         "counterId": "counter4",
+         "counterName": "Burger",
+         "essen": "Black Burger mit Pulled Salmon"
+       },
+       {
+         "counterId": "counter2",
+         "counterName": "Ausgabe 2",
+         "essen": "Bratwurst"
+        
+       }]
+ },
+  { "wochentag": "Donnerstag",
+     "auswahl": [
+       {
+         "counterId": "counter3",
+         "counterName": "Ausgabe 3",
+         "essen": "Ramen"
+       },
+       {
+         "counterId": "counter1",
+         "counterName": "Ausgabe 1",
+         "essen": "Dinonuggets"
+       },
+       {
+         "counterId": "counter4",
+         "counterName": "Burger",
+         "essen": "Black Burger mit Pulled Salmon"
+       },
+       {
+         "counterId": "counter2",
+         "counterName": "Ausgabe 2",
+         "essen": "Currywurst"
+        
+       }]
+ },
+  { "wochentag": "Freitag",
+   "auswahl": [
+       {
+         "counterId": "counter3",
+         "counterName": "Ausgabe 3",
+         "essen": "Pommes mit Ketchup"
+       },
+       {
+         "counterId": "counter1",
+         "counterName": "Ausgabe 1",
+         "essen": "Reis mit Hähnchen"
+       },
+       {
+         "counterId": "counter4",
+         "counterName": "Burger",
+         "essen": "Black Burger mit Pulled Salmon"
+       },
+       {
+         "counterId": "counter2",
+         "counterName": "Ausgabe 2",
+         "essen": "Salatbowl"
+        
+       }]
+ }
 ]
+
   

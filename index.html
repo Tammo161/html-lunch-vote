@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Vote.html</title>
     <link rel="stylesheet" href="style.css" />
-    <script type="t" src="mensaEssen.json"></script>
     <script src="https://cdn.jsdelivr.net/npm/umbrellajs"></script>
     <script type="text/javascript" src="function.js"></script>
   </head>
@@ -15,13 +14,13 @@
       <div class="container--week">
         <div class="box--day">
           <div>
-            <button id="btn--alert" class="button--day"><--</button>
+            <button id="btn--week--left" class="button--day"><--</button>
           </div>
           <div>
-            <h1 style="font-size: 50px; align-self: center">Wochentag</h1>
+            <h1 style="font-size: 50px; align-self: center" id="week--display">Wochentag</h1>
           </div>
           <div>
-            <button class="button--day">--></button>
+            <button class="button--day" id="btn--week--right">--></button>
           </div>
         </div>
         <div class="box--menu">
@@ -95,8 +94,8 @@
       </div>
     </div>
     <script defer>
-      loadMeals();
-     initialize();
+     initializeLike();
+     initializeWeekButton();
     </script>
     <!--<script defer>
       const alertButton=document.getElementById("btn--alert")

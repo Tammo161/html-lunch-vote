@@ -1,39 +1,30 @@
-function loadMeals() {
-  console.log("in loadMeals");
+async function getData() {
+  const url = "mensaEssen.json";
 
-  const json = [
-    {
-      counterId: "counter3",
-      counterName: "Ausgabe 3",
-      essen: "Westfälische Beutelwurst",
-    },
-    {
-      counterId: "counter1",
-      counterName: "Ausgabe 1",
-      essen: "Seelachs",
-    },
-    {
-      counterId: "counter4",
-      counterName: "Burger",
-      essen: "Black Burger mit Pulled Salmon",
-    },
-    {
-      counterId: "counter2",
-      counterName: "Ausgabe 2",
-      essen: "Hackschnitzel",
-    },
-  ];
+  const response = await fetch(url);
+  const result = await response.json();
+  return result;
+}
 
-  for (let i = 0; i <= json.length - 1; i++) {
-    const counter = json[i];
+async function loadMeals(wochentag) {
+  const essensplan = await getData();
+  let tagesmenu = null;
+  for (let i = 0; i <= essensplan.length - 1; i++) {
+    if (essensplan[i].wochentag == wochentag) {
+      tagesmenu = essensplan[i].auswahl;
+    }
+  }
+
+  for (let i = 0; i <= tagesmenu.length - 1; i++) {
+    const counter = tagesmenu[i];
     const counterId = counter.counterId;
 
-    u("#" + counterId + "-name").replace(counter.counterName);
-    u("#" + counterId + "-food").replace(counter.essen);
+    u("#" + counterId + "-name").text(counter.counterName);
+    u("#" + counterId + "-food").text(counter.essen);
   }
 }
 
-function initializeButton(divId, storageKey, buttonId) {
+function initializeLikeButton(divId, storageKey, buttonId) {
   u(divId).text(localStorage.getItem(storageKey));
 
   u(buttonId).on("click", function (e) {
@@ -46,10 +37,41 @@ function initializeButton(divId, storageKey, buttonId) {
   });
 }
 
-function initialize() {
+function initializeLike() {
   for (let j = 0; j < 5; j++) {
-    initializeButton("#likeCount" + j, "likeCount" + j, "#btnLike" + j);
-    initializeButton("#disLikeCount" + j, "disLikeCount" + j, "#btnDisLike" + j);
-    
+    initializeLikeButton("#likeCount" + j, "likeCount" + j, "#btnLike" + j);
+    initializeLikeButton(
+      "#disLikeCount" + j,
+      "disLikeCount" + j,
+      "#btnDisLike" + j,
+    );
   }
+}
+
+async function initializeWeekButton() {
+  let i = 0;
+  updateDisplay(i);
+
+  u("#btn--week--left").on("click", function (e) {
+   
+    if(i > 0){
+      i--;
+      updateDisplay(i);
+    }
+  });
+
+  u("#btn--week--right").on("click", function (e) {
+    
+    if(i < 4){
+      i++;
+      updateDisplay(i);
+    }
+  });
+
+}
+
+async function updateDisplay(index) {
+  const essensplan = await getData();
+  u("#week--display").text(essensplan[index].wochentag);
+  loadMeals(essensplan[index].wochentag);
 }
