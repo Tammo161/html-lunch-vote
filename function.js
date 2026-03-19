@@ -53,21 +53,27 @@ async function initializeWeekButton() {
   updateDisplay(i);
 
   u("#btn--week--left").on("click", function (e) {
-   
     if(i > 0){
       i--;
       updateDisplay(i);
     }
+     if(i == 0){
+      u('#btn--week--left').text('X')
+    }
+     u('#btn--week--right').text('-->')
   });
 
   u("#btn--week--right").on("click", function (e) {
-    
     if(i < 4){
       i++;
       updateDisplay(i);
     }
+     if(i == 4){
+      u('#btn--week--right').text('X')
+    }
+    u('#btn--week--left').text('<--')
   });
-
+ 
 }
 
 async function updateDisplay(index) {
