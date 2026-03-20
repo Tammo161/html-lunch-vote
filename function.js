@@ -27,7 +27,7 @@ async function loadMeals(wochentag) {
 function initializeLikeButton(divId, storageKey, buttonId) {
   u(divId).text(localStorage.getItem(storageKey));
 
-  u(buttonId).on("click", function (e) {
+  u(buttonId).off('click').on("click", function (e) {
     let count = localStorage.getItem(storageKey);
     count++;
 
@@ -37,12 +37,16 @@ function initializeLikeButton(divId, storageKey, buttonId) {
   });
 }
 
-function initializeLike() {
+function initializeLike(wochentag) {
   for (let j = 0; j < 5; j++) {
-    initializeLikeButton("#likeCount" + j, "likeCount" + j, "#btnLike" + j);
+    initializeLikeButton(
+      "#likeCount" + j,
+      "likeCount" + j + wochentag,
+      "#btnLike" + j,
+    );
     initializeLikeButton(
       "#disLikeCount" + j,
-      "disLikeCount" + j,
+      "disLikeCount" + j + wochentag,
       "#btnDisLike" + j,
     );
   }
@@ -53,31 +57,33 @@ async function initializeWeekButton() {
   updateDisplay(i);
 
   u("#btn--week--left").on("click", function (e) {
-    if(i > 0){
+    if (i > 0) {
       i--;
       updateDisplay(i);
     }
-     if(i == 0){
-      u('#btn--week--left').text('X')
+    if (i == 0) {
+      u("#btn--week--left").text("X");
     }
-     u('#btn--week--right').text('-->')
+    u("#btn--week--right").text("-->");
   });
 
   u("#btn--week--right").on("click", function (e) {
-    if(i < 4){
+    if (i < 4) {
       i++;
       updateDisplay(i);
     }
-     if(i == 4){
-      u('#btn--week--right').text('X')
+    if (i == 4) {
+      u("#btn--week--right").text("X");
     }
-    u('#btn--week--left').text('<--')
+    u("#btn--week--left").text("<--");
   });
- 
 }
 
 async function updateDisplay(index) {
+  console.log("updateDisplay(" + index + ")");
+
   const essensplan = await getData();
   u("#week--display").text(essensplan[index].wochentag);
   loadMeals(essensplan[index].wochentag);
+  initializeLike(essensplan[index].wochentag);
 }
